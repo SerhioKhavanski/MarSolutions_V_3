@@ -1,0 +1,18 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.menu>li{
+    font-size: 0.7rem;
+}
+.menu a{
+    color: var(--text-primery);
+    text-decoration: none;
+}

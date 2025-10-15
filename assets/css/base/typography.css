@@ -1,0 +1,25 @@
+html{
+    font-size: 18px;
+}
+@font-face {
+    font-family:"Golos";
+    src: url(../../font/GolosText-Regular.ttf);
+    font-weight: 400;
+}
+h1{
+    color: var(--text-primery);
+    font-size: 2.5rem;
+}
+h2,h3{
+    color: var(--text-primery);
+    font-size: 1.6rem;
+}
+p{
+    color: var(--text-primery);
+    font-size: 1rem;
+}
+.small-txt{font-size: 0.7rem;}
+
+@media(max-width:390px){
+    .small-mobile-txt{font-size: 0.7rem;}
+}
