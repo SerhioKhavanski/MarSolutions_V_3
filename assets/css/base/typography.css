@@ -22,7 +22,10 @@ p{
 }
 .small-txt{font-size: 0.7rem;}
 
-@media(max-width:450px){
+@media(max-width:500px){
     .small-mobile-txt{font-size: 0.7rem;}
+    h1{
+        font-size: 30px;
+    }
 
 }

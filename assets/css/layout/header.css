@@ -1,5 +1,5 @@
 .hero-content{
-    height: clamp(var(--hero-min), calc(100dvh - var(--nav-h)), var(--hero-max));
+    height: calc(100dvh - var(--nav-h));
     overflow: hidden;
     position: relative;
 }
@@ -16,12 +16,33 @@
     inset: 0;
     display: grid;
     align-content: start;
-    padding-top: 10rem;
-    margin-top: clamp(13rem, 2vh, 20rem);
+    padding-top: 7rem;
+    margin-top:14rem;
     background: linear-gradient(0deg,var(--bg) 0%, var(--bg) 75%, color-mix(in srgb, var(--bg) 0%, transparent) 100%);
 }
 
 
 .hero-info{
     text-align: center;
+}
+@media(max-width:1440px){
+    .hero-info-wrapper{
+        padding-top: 10rem;
+        margin-top:8rem;
+    }
+}
+@media(max-width:600px){
+    .hero-info-wrapper{
+        padding-top: 7rem;
+        margin-top:4rem;
+    }
+}
+@media(max-width:500px){
+    .hero-info{
+        text-align: left;
+    }
+    .hero-content{
+        height: 110dvh;
+    }
+
 }

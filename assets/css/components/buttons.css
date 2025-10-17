@@ -3,22 +3,24 @@
     background-color: var(--bg-primery-btn);
     border-radius:100px;
     padding: 1em;
-    max-width: 209px;
+    max-width: 500px;
     transition: box-shadow .3s ease, transform .2s ease-out;
     text-decoration: none;
     color:white;
+    text-align: center;
 }
 .desc-width{
     width: 209px;
 }
 .secondary-btn{
+    text-align: center;
     background-color: var(--bg-secondary-btn);
     border-bottom:2px solid #67717E;
     color: var(--text-primery);
     display: inline-block;
     border-radius:100px;
     padding: 1em;
-    max-width: 209px;
+    max-width: 500px;
     text-decoration: none;
         transition: box-shadow .3s ease,
                     transform .2s ease-out,
