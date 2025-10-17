@@ -1,0 +1,8 @@
+.hero-content{
+    height: clamp(320px, 90dvh, 1000px);
+    overflow: hidden;
+}
+.hero-content>video{
+    width: 100%;
+
+}

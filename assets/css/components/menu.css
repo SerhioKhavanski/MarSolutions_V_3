@@ -10,6 +10,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--bg);
 }
 .menu>li{
     font-size: 0.7rem;
@@ -17,6 +18,7 @@ nav{
 nav a{
     color: var(--text-primery);
     text-decoration: none;
+
 }
 .desc-menu-button{
     display: inline;
@@ -31,59 +33,37 @@ nav a{
     .mobile-menu-button{
         display: inline;
     }  
-.desc-menu-button{
+    .desc-menu-button{
         display: none;
     } 
-#menuToggle{
+    #menuToggle{
     display: block;
-}
-    
-}
+  }
 
-
-
-/* #menuToggle
+#menuToggle
 {
-  display: block;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
+  display: block; 
+  position: relative;
   -webkit-user-select: none;
   user-select: none;
+  background-color: #44ABE1;
+  padding: 13px 16px 12px 17px;
+  border-radius: 100px;
+  box-shadow: 0 0 15px #44ABE1;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-*/
 #menuToggle input
 {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
-  left: -5px;
-  
   cursor: pointer;
-  
   opacity: 0; 
-  z-index: 2; 
-  
   -webkit-touch-callout: none;
+  right: 10px;
+  bottom: 8px;
+  z-index: 5;
 } 
 
 #menuToggle span
@@ -93,86 +73,56 @@ nav a{
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
-  background: #cdcdcd;
+  background: #ffffff;
   border-radius: 3px;
-  
-  z-index: 1;
-  
+  z-index: 4;
   transform-origin: 4px 0px;
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
-
-#menuToggle span:first-child
+#menuToggle span:first-of-type
 {
   transform-origin: 0% 0%;
 }
-
-#menuToggle span:nth-last-child(2)
+#menuToggle span:last-child
 {
   transform-origin: 0% 100%;
 }
-/* 
-#menuToggle input:checked ~ span
+#menuToggle input:checked ~ span:first-of-type
 {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  transform: rotate(45deg) translate(4px, -6px);
 }
-
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+#menuToggle input:checked ~ span:nth-child(3){   /* средняя полоса */
+  opacity:0;
+  transform:scaleX(0);
 }
-
-
-#menuToggle input:checked ~ span:nth-last-child(2)
+#menuToggle input:checked ~ span:last-child
 {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(4px, 6px);
 }
-
-
-#menu
-{
+nav{
+  padding-top: 1rem;
+  z-index: 3;
+}
+.menu{
   position: absolute;
-  max-width: 400px;
+  width: 100%;
   width: 100vw;
-  max-height: 100vh;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  background: #ededed;
+  padding: 8px;
+  background: var(--bg);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-
-  
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
+  transform: translate(0, -45%);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  flex-direction: column;
+  align-items: start;
+  z-index: -1;
 }
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
+.menu>li{
+  margin-bottom: .45rem;
 }
-
-#menu li label
-{
-  cursor: pointer;
+.menu:has(+ #menuToggle > #menuCheckbox:checked){
+  transform: translate(0, 70%);
 }
-
-
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-} */
-
+}
