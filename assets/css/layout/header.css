@@ -1,8 +1,25 @@
 .hero-content{
-    height: clamp(320px, 100dvh, 1000px);
+    height: clamp(320px, calc(100dvh - var(--nav-h)), 1000px);
     overflow: hidden;
+    position: relative;
+}
+.hero-info-wrapper{
+    padding-top: 10rem;
+    position: absolute;
+    top: clamp(10%, 30%, 500px) ;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    background: linear-gradient(0deg,var(--bg) 0%, var(--bg) 75%, color-mix(in srgb, var(--bg) 0%, transparent) 100%);
+    width: 100vw;
+    height:clamp(160px, calc(100dvh - var(--nav-h)), 1000px); ;
+
 }
 .hero-content>video{
     width: 100%;
-
+    position: absolute;
+    top:-10%;
+}
+.hero-info{
+    text-align: center;
 }

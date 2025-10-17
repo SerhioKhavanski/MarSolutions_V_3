@@ -9,6 +9,8 @@ html{
 h1{
     color: var(--text-primery);
     font-size: 2.5rem;
+    font-weight: 400;
+    margin-inline: 15rem;
 }
 h2,h3{
     color: var(--text-primery);
@@ -17,6 +19,7 @@ h2,h3{
 p{
     color: var(--text-primery);
     font-size: 1rem;
+    line-height: 30px;
 }
 .small-txt{font-size: 0.7rem;}
 
