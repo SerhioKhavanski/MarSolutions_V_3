@@ -16,14 +16,22 @@ nav{
 .menu>li{
     font-size: 0.7rem;
 }
+nav>a{
+  width: 15%;
+}
+nav img{
+  width: 100%;
+}
 nav a{
     color: var(--text-primery);
     text-decoration: none;
-
 }
+
 .desc-menu-button{
-    display: inline;
-} 
+  text-align: right;
+  width: 15%;
+}
+
 .mobile-menu-button{
     display: none;
 }
@@ -34,6 +42,9 @@ nav a{
   display: none;
 }
 @media(max-width:500px){
+  nav>a{
+  width: 55%;
+}
     .mobile-menu-button{
         display: inline;
     }  

@@ -2,6 +2,8 @@
   --container-max: 1440px;
   --gutter: 16px;
   --nav-h:72px;
+  --hero-min:320px;
+  --hero-max:1000px
 }
 
 

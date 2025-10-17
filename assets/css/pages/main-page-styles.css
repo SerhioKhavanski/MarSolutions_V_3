@@ -1,9 +1,21 @@
 h1+p{
     margin-inline: 20rem;
 }
+h1{
+    margin-inline: 14rem;
+}
+
+
 .hero-buttons-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
+}
+
+@media(max-width:768px){
+    h1,h1+p{
+    margin-inline: 1rem;
+}
+
 }
