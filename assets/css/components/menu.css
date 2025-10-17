@@ -11,6 +11,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg);
+    height: var(--nav-h);
 }
 .menu>li{
     font-size: 0.7rem;
@@ -29,6 +30,9 @@ nav a{
 #menuToggle{
     display: none;
 }
+.layer{
+  display: none;
+}
 @media(max-width:500px){
     .mobile-menu-button{
         display: inline;
@@ -36,10 +40,15 @@ nav a{
     .desc-menu-button{
         display: none;
     } 
-    #menuToggle{
-    display: block;
-  }
-
+    .layer {
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 88px;
+        background-color: var(--bg);
+        z-index: 2;
+        margin-left: -1rem;
+    }
 #menuToggle
 {
   display: block; 
@@ -50,6 +59,7 @@ nav a{
   padding: 13px 16px 12px 17px;
   border-radius: 100px;
   box-shadow: 0 0 15px #44ABE1;
+    z-index: 3;
 }
 
 #menuToggle input
@@ -63,8 +73,12 @@ nav a{
   -webkit-touch-callout: none;
   right: 10px;
   bottom: 8px;
-  z-index: 5;
+  z-index: 4;
 } 
+nav img{
+  position: relative;
+  z-index: 3;
+}
 
 #menuToggle span
 {
@@ -75,7 +89,6 @@ nav a{
   position: relative;
   background: #ffffff;
   border-radius: 3px;
-  z-index: 4;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
@@ -98,17 +111,20 @@ nav a{
 }
 #menuToggle input:checked ~ span:last-child
 {
-  transform: rotate(-45deg) translate(4px, 6px);
+  transform: rotate(-45deg) translate(3px, 6px);
 }
 nav{
-  padding-top: 1rem;
-  z-index: 3;
+  position: relative;
+  padding: 1rem 0;
+  height: auto;
+  font-size: 1rem;
 }
 .menu{
   position: absolute;
-  width: 100%;
   width: 100vw;
-  padding: 8px;
+  left:-1rem;
+  padding: 1.7em;
+  margin: 0;
   background: var(--bg);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -117,12 +133,12 @@ nav{
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   flex-direction: column;
   align-items: start;
-  z-index: -1;
+  z-index: 1;
 }
 .menu>li{
   margin-bottom: .45rem;
 }
 .menu:has(+ #menuToggle > #menuCheckbox:checked){
-  transform: translate(0, 70%);
+  transform: translate(0, 55%);
 }
 }
