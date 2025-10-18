@@ -16,6 +16,9 @@ h1{
 .accent-color{
     text-align: center;
 }
+.operation-control>img{
+    width: 100%;
+}
 @media(max-width:1440px){
     h1{
         margin-inline: 10%;
@@ -24,6 +27,7 @@ h1{
         margin-inline: 15%;
     }
 }
+
 
 @media(max-width:768px){
     h1,h1+p{
