@@ -4,3 +4,6 @@
 .mi1{
     margin-inline: 1rem;
 }
+@media(max-width:1200px){
+    .gap-6{--gutter: 0px;}
+}

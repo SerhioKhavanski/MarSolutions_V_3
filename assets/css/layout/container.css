@@ -3,7 +3,13 @@
   margin-inline: auto;
   padding-inline: 190px;
 }
+
 hr{
   border: solid 1px var(--bg-primery-btn);
   margin: 56px 0;
+}
+@media(max-width:1200px){
+  .container{
+    padding-inline: 0px;
+  }
 }

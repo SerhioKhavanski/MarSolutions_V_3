@@ -12,12 +12,9 @@
 .container>img{
     width:100%;
 }
-@media(max-width:1440px){
-    h1{
-        margin-inline: 10%;
-    }
-    h1+p{
-        margin-inline: 15%;
+@media(max-width:1400px){
+    h1,h1+p{
+        margin-inline: 1rem;
     }
     .order-1{
         order: -1;
