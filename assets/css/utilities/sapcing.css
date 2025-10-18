@@ -1,6 +1,6 @@
 .mt-2{margin-top:.5rem;} .mt-3{margin-top:1rem;} .mt-4{margin-top:1.5rem;}
 .mb-0{margin-bottom:0;} .p-3{padding:1rem;}
-.gap-2{--gutter:8px;} .gap-4{--gutter:24px;}
+.gap-2{--gutter:8px;} .gap-4{--gutter:24px;}.gap-6{--gutter: 70px;}
 .mi1{
     margin-inline: 1rem;
 }
