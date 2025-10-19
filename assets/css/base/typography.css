@@ -21,6 +21,9 @@ p{
     font-size: 1rem;
     line-height: 30px;
 }
+.center{
+    text-align: center;
+}
 .small-txt{font-size: 0.7rem;}
 
 
