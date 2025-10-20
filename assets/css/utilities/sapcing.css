@@ -4,6 +4,9 @@
 .mi1{
     margin-inline: 1rem;
 }
+.wp{
+    padding-inline: 0;
+}
 @media(max-width:1200px){
     .gap-6{--gutter: 0px;}
 }

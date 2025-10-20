@@ -25,6 +25,7 @@ p{
     text-align: center;
 }
 .small-txt{font-size: 0.7rem;}
+.big-txt{font-size: 2.5rem;}
 
 
 @media(max-width:500px){

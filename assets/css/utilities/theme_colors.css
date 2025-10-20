@@ -8,6 +8,7 @@
     --grad-cta-2: #22ABE2;
     --grad-cta-3: #f2f3f700;
     --grad-cta-4: #f2f3f700;
+    --card-carousel-bg:#b1afc134;
 }
 
 .bg-cta .g1{ stop-color: var(--grad-cta-1); }
@@ -24,10 +25,10 @@
     --bg:#000403;
     --bg-secondary-btn:#c3c5c74e;
     --stroke-secondary-btn:#c3c5c7;
-    --grad-cts-1: #02373D;
-    --grad-cts-2: #02373D;
-    --grad-cts-3: rgba(0,0,0,0);
-    --grad-cts-4: rgba(0,0,0,0);
+    --grad-cta-1: #02373D;
+    --grad-cta-2: #02373D;
+    --grad-cta-3: rgba(0,0,0,0);
+    --grad-cta-4: rgba(0,0,0,0);
   }
   .logo-theme-dark{display: inline;}
   .logo-theme-light{display: none;}

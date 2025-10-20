@@ -38,9 +38,9 @@
   }
   .group {
     display: flex;
-    gap: 20px;
+    gap: 32px;
     padding-right: 30px;
-    will-change: transform; /* Мы должны быть добры к браузеру - пусть он знает, что мы будем анимировать. */
+    will-change: transform; 
     animation: scrolling 20s linear infinite;
     align-items: center;
   }
@@ -53,25 +53,14 @@
     }
   }
   
-
-
-  /* rewiew carousel */
-  /* контейнер у тебя уже есть: width: min(100% - 2rem, var(--container-max)); */
-
-/* секция */
+/* partners */
 .reviews{
   position: relative;
-  --plate: #161616;
-
-  --fade: clamp(20px, 4vw, 48px);      /* ширина градиентов по краям */
-  --gap: clamp(12px, 2.5vw, 28px);     /* зазор между карточками */
-  --card-h: clamp(180px, 26vh, 240px); /* ЕДИНАЯ высота карточек */
-  padding-inline: 0;
   background: var(--bg);
-
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-/* градиентные бортики — поверх карусели и НЕ ездят */
 .reviews::before,
 .reviews::after{
   content:"";
@@ -83,71 +72,109 @@
 .reviews::before{ left:0;  background:linear-gradient(90deg, var(--bg) 0%, transparent 100%); }
 .reviews::after { right:0; background:linear-gradient(270deg, var(--bg) 0%, transparent 100%); }
 
-/* окно прокрутки — вернём боковые отступы как раньше */
+
 .reviews__viewport{
   position: relative;
   overflow: auto hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 40px 0;          /* было 40px — это срезало полезную ширину */
+  padding: 40px 0;          
+  block-size: auto;  
 }
-.reviews__viewport::-webkit-scrollbar{ display:none; }
+.reviews__viewport::-webkit-scrollbar{ display:none;   scroll-snap-type: none !important;}
 
-/* рельса */
+
 .reviews__rail{
   display:flex;
   align-items:stretch;
   gap:var(--gap);
   margin:0;
   list-style:none;
-
-  /* «воздух» по краям, чтобы 1-я/последняя могли встать в центр */
   padding-inline: max(var(--fade), var(--edge, 1rem));
 }
 
-/* карточка */
+
 .review{
-  flex:0 0 auto;                   /* не сжимать по флексу */
-  block-size: var(--card-h);       /* высота фикс */
-  inline-size: max-content;        /* ширина = по контенту (дальше JS ограничит) */
-  max-inline-size: none;           /* на десктопе — не шире контейнера */
+  flex:0 0 auto;                   
+  block-size: var(--card-h);       
+  inline-size: max-content;      
+  min-inline-size: 240px;  
+  max-inline-size: none;          
 
   display:grid;
-  grid-template-rows: 1fr auto;    /* текст занимает доступную высоту, логотип внизу */
+  grid-template-rows: 1fr auto;   
   gap: clamp(10px, 1.2vw, 14px);
 
-  padding: clamp(14px, 2vw, 20px);
-  border-radius: 16px;             /* визуально масштабируется вместе с картой */
+  padding: clamp(32px, 2vw, 32px);
+  border-radius: 16px;            
   background:
     radial-gradient(100% 100% at 0 0, rgba(255,255,255,.05), transparent 60%),
-    var(--plate);
+    var(--card-carousel-bg);
   color:#e9e9e9;
   line-height:1.55;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
   overflow:hidden;
 
-  /* «живость» */
+
   transform: scale(var(--scale, .92));
   opacity: var(--alpha, .8);
   transition: transform .25s ease, opacity .25s ease, box-shadow .25s ease;
+  scroll-snap-align: none !important;
 }
 .review.is-active{ box-shadow:0 12px 32px rgba(0,0,0,.26); }
 
 .review p{ margin:0; }
 .review__logo{ display:flex; align-items:center; gap:8px; opacity:.9; }
-.review__logo img{ height:24px; width:auto; }
+.review__logo img{ width:100px; }
 
-/* мобилка: карта не шире экрана (минус поля) */
 @media (max-width: 768px){
-  .review{ max-inline-size: calc(100vw - 2rem); }
+  .review{
+    block-size: auto;                 
+    inline-size: 100%;
+    min-inline-size: 100%;
+    max-inline-size: 100%;
+    overflow: visible;                
+    word-break: break-word;           
+  }
+  .reviews__viewport{
+    overflow-x: auto;                 
 }
 .review, .review *{
   user-select: none;
   -webkit-user-select: none;
 }
 
-/* respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   .review{ transition:none; }
 }
 
+}
+/* reviews */
+.news{
+  -webkit-mask-image: linear-gradient(to right,
+  transparent 0,
+  var(--bg) var(--fade),
+  var(--bg) calc(100% - var(--fade)),
+  transparent 100%
+  );
+  mask-image: linear-gradient(to right,
+  transparent 0,
+  var(--bg) var(--fade),
+  var(--bg) calc(100% - var(--fade)),
+  transparent 100%
+  );
+}
+.carousel-card{
+    width:336px;
+    padding:32px; 
+    border-radius:20px; 
+    background:var(--card-carousel-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .carousel-card>img{
+    width: 100%;
+  }
+  .carousel-card>*{
+    margin: 0;
+  }

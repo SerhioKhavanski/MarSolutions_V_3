@@ -12,6 +12,17 @@
 .container>img{
     width:100%;
 }
+.main-cta{
+    position: relative;
+    margin-top: 100px;
+}
+.main-cta-info{
+    max-width: 680px;
+    left: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    top: 10%;
+}
 @media(max-width:1400px){
     h1,h1+p{
         margin-inline: 1rem;
