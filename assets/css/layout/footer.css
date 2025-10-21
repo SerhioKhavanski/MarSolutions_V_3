@@ -29,6 +29,7 @@ footer section article:nth-child(5){
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .conditions>a{
     text-decoration: none;
