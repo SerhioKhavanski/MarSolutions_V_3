@@ -2,11 +2,20 @@
 .mb-0{margin-bottom:0;} .p-3{padding:1rem;}
 .gap-2{--gutter:8px;} .gap-4{--gutter:24px;}.gap-6{--gutter: 70px;}
 .mi1{
-    margin-inline: 1rem;
+
+    margin: 150px 1rem 50px 1rem;
 }
 .wp{
     padding-inline: 0;
 }
+.hero-buttons-container.wm{
+    margin-inline: 0;
+}
 @media(max-width:1200px){
     .gap-6{--gutter: 0px;}
+}
+@media(max-width:500px){
+    .mi1{
+        margin: 100px 1rem 25px 1rem;
+    }
 }

@@ -24,6 +24,12 @@ p{
 .center{
     text-align: center;
 }
+.left{
+    text-align: left;
+}
+.footer-info>.left{
+    text-align: left;
+}
 .small-txt{font-size: 0.7rem;}
 .big-txt{font-size: 2.5rem;}
 

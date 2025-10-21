@@ -15,19 +15,50 @@
 .main-cta{
     position: relative;
     margin-top: 100px;
+    overflow: hidden;
+}
+.main-cta>svg{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+
 }
 .main-cta-info{
     max-width: 680px;
     left: 0; right: 0;
     margin: auto;
     position: absolute;
-    top: 10%;
+    top: 8%;
+}
+@media(max-width:1440px){
+    .main-cta{
+        width: 100%;
+    }
 }
 @media(max-width:1400px){
-    h1,h1+p{
-        margin-inline: 1rem;
-    }
     .order-1{
         order: -1;
+    }
+}
+@media(max-width:500px){
+    .main-cta{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-cta-info{
+        margin-inline: 1rem;
+    }
+    .main-cta-info,.main-cta>svg{
+        position: static;
+    }
+    .main-cta>svg{
+        width: 100%;
+        transform: translateX(0);
+        order: 1;
+    }
+    .main-cta-info>h2, 
+    .main-cta-info>p{
+        text-align: left;
     }
 }

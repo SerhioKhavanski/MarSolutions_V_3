@@ -2,7 +2,9 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--gutter);
-  align-items: center;
+}
+.va{
+    align-items: center;
 }
 .end{
   justify-self: end;
