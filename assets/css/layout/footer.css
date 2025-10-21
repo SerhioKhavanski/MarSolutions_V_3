@@ -18,8 +18,14 @@ footer section article:nth-child(4){
 footer section article:nth-child(5){
     width: 159px;
 }
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 .footer-info>p{
     line-height: 17px;
+    margin: 0;
 }
 .footer-info a{
     text-decoration: none;
@@ -29,11 +35,25 @@ footer section article:nth-child(5){
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 .conditions>a{
     text-decoration: none;
     color: #616465;
+}
+.social-links svg{
+    width: 24px;
+    height: 24px;
+    fill: var(--text-primery);
+}
+.social-links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.footer-info>p:first-child{
+    margin-top: 20px;
+    text-transform: uppercase;
 }
 @media(max-width:500px){
     footer section article:nth-child(1),

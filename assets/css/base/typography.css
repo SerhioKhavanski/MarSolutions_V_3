@@ -30,14 +30,14 @@ p{
 .footer-info>.left{
     text-align: left;
 }
-.small-txt{font-size: 0.7rem;}
+.small-txt{font-size: 0.78rem;}
 .big-txt{font-size: 2.5rem;}
 
 
 @media(max-width:500px){
-    .small-mobile-txt{font-size: 0.7rem;}
+    .small-mobile-txt{font-size: 0.78rem;}
     h1{
-        font-size: 30px;
+        font-size: 1.6rem;
     }
 
 }
