@@ -1,0 +1,53 @@
+.benefits-points>.carousel-card{
+    max-width: 500px;
+    padding: 32px;
+}
+.benefits-points>.carousel-card>img{
+    width: 120px;
+}
+.benefits-points{
+    display: flex;
+    flex-direction: column;
+}
+.benefits-points>.carousel-card:nth-child(2n){
+    align-self: flex-end;
+}
+.benefits-points>.carousel-card:last-child{
+    max-width: 100%;
+    margin-top: 60px;
+}
+.extention{
+    max-width: 700px;
+    margin: auto;
+    background-color: #b1afc134;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 300px;
+}
+.extention>*{
+    margin: 0;
+}
+.extentions-heading>p{
+    max-width: 734px;
+    margin: auto;
+    text-align: center;
+}
+.extentions-heading>*{
+    margin: 0;
+}
+.extentions-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+@media(max-width:1440px){
+    .benefits-points{
+        gap: 34px;
+    }
+    .benefits-points>.carousel-card:last-child{
+        margin-top:0;
+    }
+}

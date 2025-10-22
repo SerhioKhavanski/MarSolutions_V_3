@@ -164,7 +164,7 @@
   );
 }
 .carousel-card{
-    width:336px;
+    max-width:336px;
     padding:32px; 
     border-radius:20px; 
     background:var(--card-carousel-bg);

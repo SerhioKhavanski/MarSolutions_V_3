@@ -11,6 +11,9 @@
 .m2{
     margin-top: 20%;
 }
+.btm{
+    margin-top: 160px;
+}
 .hero-buttons-container.wm{
     margin-inline: 0;
 }
@@ -20,5 +23,8 @@
 @media(max-width:500px){
     .mi1{
         margin: 100px 1rem 25px 1rem;
+    }
+    .btm{
+        margin-top: 50px;
     }
 }
