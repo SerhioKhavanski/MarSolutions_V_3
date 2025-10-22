@@ -27,6 +27,9 @@ p{
 .left{
     text-align: left;
 }
+.time .left{
+    text-align: left;
+}
 .footer-info>.left{
     text-align: left;
 }

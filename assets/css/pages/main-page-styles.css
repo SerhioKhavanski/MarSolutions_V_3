@@ -21,8 +21,6 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 1440px;
-
 }
 .main-cta-info{
     max-width: 680px;
@@ -30,6 +28,11 @@
     margin: auto;
     position: absolute;
     top: 8%;
+}
+@media(max-width:1920px){
+    .main-cta>svg{
+        width: 1920px;
+    }
 }
 @media(max-width:1440px){
     .main-cta{

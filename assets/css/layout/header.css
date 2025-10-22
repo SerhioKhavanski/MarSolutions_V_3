@@ -40,7 +40,7 @@ h1,h1+p{
     position: static;
 }
 .second-header>.hero-info-wrapper{
-    margin-top: 26rem;
+    margin-top: 18rem;
     background: linear-gradient(
         0deg,
         var(--bg) 0%,
