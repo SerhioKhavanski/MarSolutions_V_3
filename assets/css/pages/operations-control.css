@@ -10,6 +10,17 @@
     background-color: var(--bg-primery-btn);
     transition: 0.3s;
 }
+.reverce:nth-child(1n)>img{
+    order: 1;
+}
+.reverce:nth-child(2)>img{
+    order: -1;
+}
+@media(max-width:500px){
+    .reverce:nth-child(1n)>img{
+        order: -1;
+    }
+}
 @media(hover:hover) and (pointer: fine){
     .steps>.carousel-card:last-child:hover{
         box-shadow: 0 0 15px var(--bg-primery-btn);

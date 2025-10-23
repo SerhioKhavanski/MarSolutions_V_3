@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/components/buttons.css">
     <link rel="stylesheet" href="assets/css/components/menu.css">
     <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/components/slider.css">
     <link rel="stylesheet" href="assets/css/layout/container.css">
     <link rel="stylesheet" href="assets/css/layout/footer.css">
     <link rel="stylesheet" href="assets/css/layout/header.css">
@@ -68,42 +69,88 @@
 
     <main>
 
-         <section class="container row gap-6 va">
-            <img class="col-xxl-6" src="assets/img/marta_operations_control.webp" alt="">
+        <!-- ===== Slider ===== -->
+<section class="picker-wrap">
+    <div class="picker" id="picker" aria-label="Типы нарушений" tabindex="0">
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Договорные сделки</p>
+      </button>
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Сигнальные сделки</p>
+      </button>
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>
+          Front-running, Spoofing, Momentum Ignition, Pull Up/Down,
+          Trash & Cash, Pump & Dump и т.д.
+        </p>
+      </button>
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Сигнальные сделки
+
+        </p>
+      </button>
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Конфликт интересов</p>
+      </button>
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Сделки без экономического смысла</p>
+      </button>
+
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Внутренние встречные сделки</p>
+      </button>
+
+      <button class="slider-card">
+        <img src="assets/img/check.webp" alt="">
+        <p>Сигналы Московской биржи и Существенные отклонения Московской биржи</p>
+      </button>
+    </div>
+  </section>
+  
+
+  
+
+         <section class="container row gap-6 va reverce">
+            <img class="col-xxl-6" src="assets/img/interface.webp" alt="">
             <article class="operation-control-info col-xxl-6 ">
-                <h2>MARTA – <br>Контроль операций</h2>
+                <h2>Интуитивно понятный интерфейс и комплексная обработка данных</h2>
                 <p>
-                    Платформа построена на основе неограниченной консолидации данных и способна обрабатывать любой объем операций. Ее уникальная риск-модель выявляет подозрительные действия, повышая эффективность и конкурентные преимущества.
+                    Высокопроизводительный и удобный графический интерфейс со всеми необходимыми функциями для работы с данными.
                 </p>
                 <p>
                     Сервис MARTA, отвечающий требованиям законодательства, не только обнаруживает недобросовестные практики, но и автоматизирует полный цикл внутреннего контроля.
                 </p>
-                <a href="operations-control.html" class="secondary-btn desc-width">Узнать больше</a>
             </article>
         </section>
         
-        <section class="container row gap-6 va">
+        <section class="container row gap-6 va reverce">
             <article class="operation-control-info col-xxl-6">
-                <h2>MARTA – <br>Списки Инсайдеров</h2>
+                <h2>Ведите мониторинг, анализи расследования в одном ПО</h2>
                 <p>
-                    Автоматизация ведения списков инсайдеров для всех типов участников торгов за счет автоматизации полученияи обработки данных из кадровых служб, позволяющее существенно снизить операционные и комплаенс-риски, связанные с исполнением Закона 224-ФЗ. 
+                    Дневная сводка показывает ключевые параметры системы сразу при входе в систему. В ней отображается обзор информации за одну выбранную дату.
                 </p>
-
-                <a href="" class="secondary-btn desc-width">Узнать больше</a>
+                <p>
+                    Для удобства проведения анализа риск-активности в системе предусмотрен функционал графического отображения цен инструмента, объёмов торгов, совершённых операций, событий и т.п.
+                </p>
             </article>
-            <img class="col-xxl-6 end order-1" src="assets/img/marta_insider_lists.webp" alt="">
+            <img class="col-xxl-6 end order-1" src="assets/img/monitoring.webp" alt="">
 
         </section>
 
-        <section class="container row gap-6 va">
-            <img class="col-xxl-6" src="assets/img/marta_insider_lists.webp" alt="">
+        <section class="container row gap-6 va reverce">
+            <img class="col-xxl-6" src="assets/img/analysis.webp" alt="">
             <article class="operation-control-info col-xxl-6">
-                <h2>MARTA </h2>
+                <h2>Обработка и анализ 1 млн операций менее чем за 10 мин</h2>
                 <p>
-                    Дневная сводка сразу показывает ключевые параметры системы сразу при входе в систему. В нем отображается обзор информации за одну выбранную дату (по умолчанию за последнюю дату, за которую в системе присутствуют данные)
+                    MARTA представляет собой систему, полностью размещенную on-premise (локально, внутри цифрового контура клиента). Особенности развертывания позволяют совместное использование ресурсов, и.с. нет необходимости выделять отдельный сервер, на котором будет работать только решение MARTA.
                 </p>
-
-                <a href="" class="secondary-btn desc-width">Узнать больше</a>
             </article>
 
 
@@ -213,6 +260,7 @@
         <hr>
     </div>
     
+    
 
     <footer class="container">
          <a href=""><img class="logo-theme-dark" src="assets/img/mar_solutions_logo_dark.svg" alt=""><img class="logo-theme-light" src="assets/img/mar_solutions_logo_light.svg" alt=""></a>
@@ -289,5 +337,7 @@
         </div>
     </footer>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/size.js"></script>
 </body>
 </html>
