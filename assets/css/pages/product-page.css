@@ -1,3 +1,17 @@
+html, body { overflow-x: clip; }
+@keyframes march { to { stroke-dashoffset: calc(-1 * var(--period)); } }
+#Shape [id^="Full rotation"] ellipse{
+
+  stroke-dashoffset: 0;
+  animation: march linear infinite;
+}
+
+
+#Shape #Full\ rotation     ellipse { --period: 24.55px; animation-duration: 0.82s; }
+#Shape #Full\ rotation_2   ellipse { --period: 82.97px; animation-duration: 2.60s; }
+#Shape #Full\ rotation_3   ellipse { --period: 41.83px; animation-duration: 1.30s; }
+#Shape #Full\ rotation_4   ellipse { --period: 41.83px; animation-duration: 1.70s; }
+
 .benefits-points>.carousel-card{
     max-width: 500px;
     padding: 32px;
@@ -16,15 +30,19 @@
     max-width: 100%;
     margin-top: 60px;
 }
+.extentions{
+        margin-bottom: 300px;
+}
 .extention{
-    max-width: 700px;
-    margin: auto;
-    background-color: #b1afc134;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 300px;
+  position: relative;
+  z-index: 1;                   
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #b1afc134;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .extention>*{
     margin: 0;
@@ -43,6 +61,35 @@
     gap: 12px;
     margin-bottom: 50px;
 }
+
+.extention-wraper{
+  --gut: calc((100vw - var(--container-max)) / 2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: visible;    
+}
+
+
+.dec1, .dec2{
+  position: absolute;
+  top: 50%;
+  width: clamp(700px, 70vw, 80%); 
+  height: auto;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  z-index: 0;
+}
+.extention{ position: relative; z-index: 1; }
+.dec1{ 
+      left: var(--gutter);
+  transform: translate(-100%, 0%); 
+ }
+.dec2{
+    right: var(--gutter);
+  transform: translate(100%, 0%) scaleX(-1); 
+ }
+
 @media(max-width:1440px){
     .benefits-points{
         gap: 34px;
@@ -50,4 +97,17 @@
     .benefits-points>.carousel-card:last-child{
         margin-top:0;
     }
+    
+}
+
+@media (max-width: 1200px){
+  .dec1{display: none;}
+  .dec2{ transform: translate( 80%, 50%) scaleX(-1); }
+  .extentions{
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 500px){
+  .dec1,.dec2{ display: none; }
+
 }
