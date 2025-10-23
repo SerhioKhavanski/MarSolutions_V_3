@@ -1,0 +1,17 @@
+.steps>.carousel-card{
+    max-width: 100%;
+}
+.steps>.carousel-card>img{
+    width: 100px;
+}
+.steps>.carousel-card:last-child{
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-primery-btn);
+    transition: 0.3s;
+}
+@media(hover:hover) and (pointer: fine){
+    .steps>.carousel-card:last-child:hover{
+        box-shadow: 0 0 15px var(--bg-primery-btn);
+    }
+}

@@ -53,6 +53,23 @@ h1,h1+p{
 .second-hero-info h1{
     text-align: center;
 }
+.third-hero-info{
+    height: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../../img/operations-control-hero-img.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 0 30%;
+}
+.third-hero-info>.container{
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+.third-hero-info p{
+    margin-top: 6%;
+    text-align: center;
+}
 
 @media(max-width:1440px){
     .hero-info-wrapper{
@@ -80,4 +97,7 @@ h1,h1+p{
     .second-hero-info h1{
     text-align:left;
 }
+    .third-hero-info h1{
+        text-align: center;
+    }
 }
