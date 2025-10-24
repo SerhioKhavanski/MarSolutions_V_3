@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/components/menu.css">
     <link rel="stylesheet" href="assets/css/components/cards.css">
     <link rel="stylesheet" href="assets/css/components/divider.css">
+    <link rel="stylesheet" href="assets/css/components/slider.css">
     <link rel="stylesheet" href="assets/css/layout/container.css">
     <link rel="stylesheet" href="assets/css/layout/footer.css">
     <link rel="stylesheet" href="assets/css/layout/header.css">
@@ -24,7 +25,7 @@
 <body>
     <header>
 
-        <nav class="container" role="navigation">
+        <nav class="container wptb" role="navigation">
             <a href=""><img class="logo-theme-dark" src="assets/img/mar_solutions_logo_dark.svg" alt=""><img class="logo-theme-light" src="assets/img/mar_solutions_logo_light.svg" alt=""></a>
             
             <div class="layer" aria-hidden="true" role="presentation" tabindex="-1"></div>
@@ -54,7 +55,7 @@
         </nav>
 
         <section class="hero-content">
-            <video src="assets/video/3572842181-preview.mp4" autoplay muted playsinline loop preload="metadata" poster="assets/img/hero-img.webp"  >
+            <video src="assets/video/3572842181-preview.mp4" autoplay muted playsinline loop preload="metadata" poster="assets/img/hero-img-main.webp"  >
                 <source media="(min-width:768px)" src="assets/video/3572842181-preview.mp4" type="video/mp4"  >
                 <img src="assets/img/hero-img-main.webp" alt="">
             </video>
@@ -157,7 +158,7 @@
         <section class="reviews container ptb1 wpi gap-5" aria-label="Отзывы наших клиентов">
             <h2 class="center">Отзывы наших клиентов</h2>
 
-            <div class="reviews__viewport" id="reviews">
+            <div class="reviews__viewport gap-3" id="reviews">
 
             <ul class="reviews__rail">
                 <li class="review">
@@ -193,34 +194,39 @@
 
         <section class="container news  wpi ptb1 pb72 gap-5" aria-label="Новости">
             <h2 class="center">Новости</h2>
-            <div class="news-wrapper row">
-                <article class="carousel-card col-12 col-xl-3">
+            <div class="news-wrapper gap-3">
+                <article class="carousel-card">
                 <img src="assets/img/Overlay+Shadow.png" alt="">
-                <p>ЦБ уличил члена совета директоров AMEZ в инсайдерской торговле</p>
-                <p class="small-txt">Подробнее на РБК</p>
+                <p>ЦБ уличил главу оператора «Мосгорломбарда»в инсайдерской торговле</p>
+                <p class="small-txt"><a href="">Подробнее на РБК</a></p>
                 </article>
 
-                <article class="carousel-card col-12 col-xl-3">
+                <article class="carousel-card">
                 <img src="assets/img/Overlay+Shadow.png" alt="">
                 <p>ЦБ уличил члена совета директоров AMEZ в инсайдерской торговле</p>
-                <p class="small-txt">Подробнее на РБК</p>
+                <p class="small-txt"><a href="">Подробнее на РБК</a></p>
                 </article>
 
-                <article class="carousel-card col-12 col-xl-3">
+                <article class="carousel-card">
                 <img src="assets/img/Overlay+Shadow.png" alt="">
-                <p>ЦБ уличил члена совета директоров AMEZ в инсайдерской торговле</p>
-                <p class="small-txt">Подробнее на РБК</p>
+                <p>ЦБ обяжет всех инсайдеров раскрываться и введет статус суперинсайдера</p>
+                <p class="small-txt"><a href="">Подробнее на РБК</a></p>
                 </article>
 
-                <article class="carousel-card col-12 col-xl-3">
+                <article class="carousel-card">
                 <img src="assets/img/Overlay+Shadow.png" alt="">
-                <p>ЦБ уличил члена совета директоров AMEZ в инсайдерской торговле</p>
-                <p class="small-txt">Подробнее на РБК</p>
+                <p>Выпущено обновление Релиз MARTA 1.23.0</p>
                 </article> 
+                
+                <article class="carousel-card">
+                    <img src="assets/img/Overlay+Shadow.png" alt="">
+                    <p>Выпущено обновление Релиз MARTA 1.23.0</p>
+                </article> 
+                
             </div>             
         </section>
 
-        <section class="main-cta wpi">
+        <section class="main-cta wpi pb72">
             <svg class="bg-cta" viewBox="0 0 1435 548" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1432.64 363.726C1201.19 479.242 958.744 538.365 714.359 538.365C469.949 538.365 227.476 479.228 -3.99994 363.69C226.727 485.203 469.522 547.473 714.358 547.473C959.168 547.473 1201.94 485.217 1432.64 363.726Z" fill="#3FE1F3"/>
             <path d="M1435.01 363.123C1203.19 479.037 960.32 538.368 715.508 538.368C470.695 538.368 227.828 479.037 -3.99214 363.123V-68.2805H1435.01V363.123Z" fill="url(#paint0_linear_221_1167)"/>
@@ -327,7 +333,12 @@
             <a class="small-txt" href="">Управление файлами cookie</a>
         </div>
     </footer>
-<script src="assets/js/carousel-rewievs.js"></script>
 <script src="assets/js/menu.js"></script>
+<script src="assets/js/slider-news.js"></script>
+<script src="assets/js/rewiew-card-resize.js"></script>
+<script src="assets/js/slider-rewievs.js"></script>
+    
+    
+    
 </body>
 </html>

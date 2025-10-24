@@ -1,7 +1,7 @@
 .row{
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--gutter);
+  column-gap: var(--gutter); row-gap: 24px;
 }
 .va{
     align-items: center;
@@ -57,4 +57,10 @@
   .col-xxl-7{grid-column:span 7;}  .col-xxl-8{grid-column:span 8;}
   .col-xxl-9{grid-column:span 9;}  .col-xxl-10{grid-column:span 10;}
   .col-xxl-11{grid-column:span 11;} .col-xxl-12{grid-column:span 12;}
+}
+
+@media (max-width:1024px){ .gap-6{ --gutter: 48px; } }
+@media (max-width:640px){
+  .row{ grid-template-columns: 1fr; }
+  .gap-6{ --gutter: 16px; row-gap:16px; }
 }

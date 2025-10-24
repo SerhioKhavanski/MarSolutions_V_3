@@ -1,8 +1,10 @@
 .gap-1{--gutter: 16px;}
 .gap-2{--gutter: 18px;}
+.gap-3{--gutter: 32px;}
 .gap-4{--gutter: 48px;}
 .gap-5{--gutter: 56px;}
-.gap-6{--gutter: 71px;}
+.gap-6{--gutter: clamp(16px 4% 71px);}
+.gap-6 { --gutter: min(4%, 71px); }
 .dm{
     margin: 0;
 }
@@ -25,4 +27,5 @@
     padding-top: 48px;
     padding-bottom: 48px;
 } 
+
 

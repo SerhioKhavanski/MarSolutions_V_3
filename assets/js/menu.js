@@ -1,13 +1,13 @@
 (() => {
   const nav = document.querySelector('header > nav.container');
-  const checkbox = document.getElementById('menuCheckbox'); // бургер
+  const checkbox = document.getElementById('menuCheckbox'); 
   if (!nav) return;
 
-  // компенсируем фиксированную шапку, чтобы контент не уезжал под неё
+
   const setSpacer = () => {
     const h = nav.offsetHeight;
     document.documentElement.style.setProperty('--nav-h', h + 'px');
-    // добавим верхний паддинг хедеру, чтобы блок hero/контент не прятался
+
     document.querySelector('header').style.paddingTop = h + 'px';
   };
   setSpacer();
@@ -16,9 +16,9 @@
   let lastY = window.scrollY;
   let ticking = false;
 
-  const MOB_BP = 500;   // мобилка
-  const DELTA  = 6;     // фильтр дрожи
-  const TOPPIN = 16;    // у самого верха всегда показываем
+  const MOB_BP = 500;   
+  const DELTA  = 6;    
+  const TOPPIN = 16;    
 
   function onScroll() {
     if (ticking) return;
@@ -42,8 +42,6 @@
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  // если клик по пункту меню на мобилке — закрыть бургер
   document.querySelectorAll('nav .menu a').forEach(a => {
     a.addEventListener('click', () => { if (checkbox) checkbox.checked = false; });
   });

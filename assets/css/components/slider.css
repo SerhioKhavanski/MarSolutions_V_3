@@ -1,6 +1,77 @@
 
 
 
+
+  .news,.reviews__viewport{
+    display: grid;
+    gap: var(--gutter);
+      -webkit-mask-image: linear-gradient(to right,
+      transparent 0,
+      var(--bg) var(--fade),
+      var(--bg) calc(100% - var(--fade)),
+      transparent 100%
+      );
+    
+      mask-image: linear-gradient(to right,
+      transparent 0,
+      var(--bg) var(--fade),
+      var(--bg) calc(100% - var(--fade)),
+      transparent 100%
+      );
+    }
+    .reviews{
+      position: relative;
+      display: grid;
+      gap: var(--gutter);
+    }
+    
+    
+    .reviews__viewport{
+      position: relative;
+      overflow-x: auto;              
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;        
+      block-size: auto;  
+    }
+    .reviews__viewport::-webkit-scrollbar{ display:none;   scroll-snap-type: none !important;}
+    .reviews__viewport{
+      cursor: grab;
+      user-select: none;
+    }
+    .reviews__viewport.is-dragging{
+      cursor: grabbing;
+    }
+    
+    
+    .reviews__rail{
+      display:flex;
+      gap:var(--gutter);
+      margin:0;
+      list-style:none;
+      overflow: hidden;
+      padding-inline: var(--edge-left, 1rem) var(--edge-right, 1rem);
+      inline-size: max-content;   
+    }
+  .news-wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 336px; 
+    overflow-x: auto;
+    gap: var(--gutter);
+    scrollbar-width: none;      
+    -ms-overflow-style: none;
+    cursor: grab; 
+    user-select: none;
+    touch-action: pan-y;
+    overscroll-behavior: auto;
+  }
+  .news-wrapper::-webkit-scrollbar{ display:none; }
+  .news-wrapper.grabbing{ cursor: grabbing; user-select: none; }
+  .news-wrapper>.carousel-card a{
+    text-decoration: none;
+    color: var(--text-primery);
+  }
   .picker-wrap{
     margin: 40px auto;
   }
@@ -52,8 +123,10 @@
       rgba(0,0,0,0) 100%
     );
   }
-  
 
+
+
+    
   @media (max-width: 520px){
     .picker{ 
         height: 200px;; 
@@ -61,4 +134,18 @@
         padding: 18px 6px; }
 
   }
+    @media(max-width:500px){
+      .news-wrapper{
+        grid-auto-flow: row;          
+        grid-template-columns: 1fr;  
+        grid-auto-columns: unset; 
+        overflow: visible; 
+      }
+      .reviews__viewport{
+        -webkit-mask-image: none;
+        mask-image:none;
+      }
+    }
+  
+
   

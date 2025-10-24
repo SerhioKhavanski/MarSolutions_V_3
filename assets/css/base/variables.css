@@ -7,12 +7,10 @@
   --hero-min:320px;
   --hero-max:1000px;
   --fade: clamp(20px, 4vw, 70px);     
-  --gap: clamp(12px, 2.5vw, 32px);     
   --card-h: 380px;
   --rail-x: 18px;           
   --rail-w: 2px;           
   --rail: #3bd1e6;          
-  --gap: 28px;
   --ring-gap: clamp(220px, 28vw, 760px);
 }
 

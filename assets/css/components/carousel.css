@@ -15,8 +15,6 @@
         animation-play-state: paused;
       }
   }
-
-
   .group {
     display: flex;
     gap: 32px;
@@ -34,43 +32,6 @@
     }
   }
   
-/* partners */
-.reviews{
-  position: relative;
-  display: grid;
-  gap: var(--gutter);
-}
-
-.reviews::before,
-.reviews::after{
-  content:"";
-  position:absolute; top:0; bottom:0;
-  width:var(--fade);
-  pointer-events:none;
-  z-index:3;
-}
-.reviews::before{ left:0;  background:linear-gradient(90deg, var(--bg) 0%, transparent 100%); }
-.reviews::after { right:0; background:linear-gradient(270deg, var(--bg) 0%, transparent 100%); }
-
-
-.reviews__viewport{
-  position: relative;
-  overflow: auto hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;        
-  block-size: auto;  
-}
-.reviews__viewport::-webkit-scrollbar{ display:none;   scroll-snap-type: none !important;}
-
-
-.reviews__rail{
-  display:flex;
-  align-items:stretch;
-  gap:var(--gap);
-  margin:0;
-  list-style:none;
-  padding-inline: max(var(--fade), var(--edge, 1rem));
-}
 
 
 
