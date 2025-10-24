@@ -1,30 +1,10 @@
-.mt-2{margin-top:.5rem;} .mt-3{margin-top:1rem;} .mt-4{margin-top:1.5rem;}
-.mb-0{margin-bottom:0;} .p-3{padding:1rem;}
-.gap-2{--gutter:8px;} .gap-4{--gutter:24px;}.gap-6{--gutter: 70px;}
-.mi1{
-
-    margin: 150px 1rem 50px 1rem;
+.gap-1{--gutter: 16px;}
+.gap-5{--gutter: 48px;}
+.gap-6{--gutter: 71px;}
+.dm{
+    margin: 0;
 }
-.wp{
+.wpi{
     padding-inline: 0;
-}
-.m2{
-    margin-top: 20%;
-}
-.btm{
-    margin-top: 160px;
-}
-.hero-buttons-container.wm{
-    margin-inline: 0;
-}
-@media(max-width:1200px){
-    .gap-6{--gutter: 0px;}
-}
-@media(max-width:500px){
-    .mi1{
-        margin: 100px 1rem 25px 1rem;
-    }
-    .btm{
-        margin-top: 50px;
-    }
-}
+}  
+

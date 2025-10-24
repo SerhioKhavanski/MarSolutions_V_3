@@ -2,7 +2,6 @@
 
 
   .picker-wrap{
-    max-width: 1084px;
     margin: 40px auto;
   }
 
@@ -18,7 +17,7 @@
     scroll-snap-type: y proximity;
     display: grid;
     gap: 21px;
-    padding: 24px 60px;
+    padding: 24px 0;
     isolation: isolate;  
     --spacer: 200px;                
     scroll-snap-type: y proximity;
@@ -55,45 +54,11 @@
   }
   
 
-  .slider-card{
-    margin: auto;
-    width: 70%;
-    padding: 12px;
-    text-align: left;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    background:var(--card-carousel-bg);
-    align-items: center;
-    gap: 24px;
-    will-change: transform;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;  
-    transition: 0.3s;
-    border: none;
-  }
-  .slider-card>img{
-    width: 32px;
-  }
-  .active>img{
-    width: 48px;
-  }
-  .active>p{
-    font-size: 27px;
-  }
-  .slider-card.active{
-    width: 100%;
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-  
-
   @media (max-width: 520px){
     .picker{ 
         height: 200px;; 
         gap: 12px; 
         padding: 18px 6px; }
-    .slider-card{ border-radius: 14px; }
+
   }
   

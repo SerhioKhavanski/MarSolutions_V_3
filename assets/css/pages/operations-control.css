@@ -10,16 +10,17 @@
     background-color: var(--bg-primery-btn);
     transition: 0.3s;
 }
-.reverce:nth-child(1n)>img{
-    order: 1;
-}
-.reverce:nth-child(2)>img{
+.reverse:nth-child(2)>.operation-control-info,
+.reverse:nth-child(4)>.operation-control-info{
     order: -1;
 }
+.reverse:nth-child(3)>.operation-control-info{
+    order: 1;
+}
 @media(max-width:500px){
-    .reverce:nth-child(1n)>img{
-        order: -1;
-    }
+.reverse:nth-child(3)>.operation-control-info{
+    order: -1;
+}
 }
 @media(hover:hover) and (pointer: fine){
     .steps>.carousel-card:last-child:hover{

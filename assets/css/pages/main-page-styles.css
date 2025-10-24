@@ -6,6 +6,11 @@
     gap: 24px;
     margin-inline: 1rem;
 }
+.carousel-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
 .accent-color{
     text-align: center;
 }

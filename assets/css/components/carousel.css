@@ -1,6 +1,5 @@
 .carousel {
     margin: 0 auto;
-    padding: 20px 0;
     overflow: hidden;
     display: flex;
     > * {
