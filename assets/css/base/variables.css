@@ -1,10 +1,12 @@
 :root{
   --container-max: 1440px;
+  --container-pad-x: clamp(16px, 6vw, 208px);
+  --container-pad-y: clamp(24px, 6vw, 60px);
   --gutter: 16px;
   --nav-h:72px;
   --hero-min:320px;
   --hero-max:1000px;
-  --fade: clamp(20px, 4vw, 48px);     
+  --fade: clamp(20px, 4vw, 70px);     
   --gap: clamp(12px, 2.5vw, 32px);     
   --card-h: 380px;
   --rail-x: 18px;           

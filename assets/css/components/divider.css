@@ -1,3 +1,4 @@
 hr{
   border: solid 1px var(--bg-primery-btn);
+  margin: 0;
 }

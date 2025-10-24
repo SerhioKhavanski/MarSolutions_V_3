@@ -1,3 +1,9 @@
+.carousel-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  overflow: hidden;
+}
 .carousel {
     margin: 0 auto;
     overflow: hidden;
@@ -31,9 +37,8 @@
 /* partners */
 .reviews{
   position: relative;
-  background: var(--bg);
-  margin-top: 100px;
-  margin-bottom: 100px;
+  display: grid;
+  gap: var(--gutter);
 }
 
 .reviews::before,
@@ -52,8 +57,7 @@
   position: relative;
   overflow: auto hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 40px 0;          
+  scrollbar-width: none;        
   block-size: auto;  
 }
 .reviews__viewport::-webkit-scrollbar{ display:none;   scroll-snap-type: none !important;}
@@ -73,18 +77,4 @@
 
 
 
-/* reviews */
-.news{
-  -webkit-mask-image: linear-gradient(to right,
-  transparent 0,
-  var(--bg) var(--fade),
-  var(--bg) calc(100% - var(--fade)),
-  transparent 100%
-  );
-  mask-image: linear-gradient(to right,
-  transparent 0,
-  var(--bg) var(--fade),
-  var(--bg) calc(100% - var(--fade)),
-  transparent 100%
-  );
-}
+

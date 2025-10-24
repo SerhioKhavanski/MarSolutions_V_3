@@ -160,10 +160,13 @@ nav{
 }
 }
 @media (max-width: 500px) {
+
   header > nav.container {
     margin-inline: 1rem;  
     transform: none !important;
     width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 @media (min-width: 501px) {
