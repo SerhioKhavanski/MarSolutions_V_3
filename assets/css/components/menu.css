@@ -34,9 +34,7 @@ nav a{
     text-decoration: none;
 }
 
-.desc-menu-button{
-  text-align: right;
-}
+
 
 .mobile-menu-button{
     display: none;
@@ -170,6 +168,20 @@ nav{
   }
 }
 @media (min-width: 501px) {
+  header > nav.container .menu{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  
+    width: auto;                     
+    margin: 0;
+    background: transparent;            
+    display: flex;
+    align-items: center;
+    justify-content: center;           
+    gap: clamp(12px, 2vw, 40px);
+    z-index: 2;                        
+  }
   header > nav.container.nav--hidden {
     transform: translateY(-100%);
   }

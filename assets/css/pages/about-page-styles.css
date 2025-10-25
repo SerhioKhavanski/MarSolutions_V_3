@@ -134,6 +134,9 @@
      }
     .since > img{ display: none; }
     .since h2{ position: static; }
+    .pb72{
+        padding-bottom: 0;
+    }
   }
   
 

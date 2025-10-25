@@ -1,13 +1,22 @@
-h1{
-    margin-bottom:100px ;
-}
 .resources{
-    margin-top: 56px;
-    margin-bottom: 56px;
+    gap: 24px;
 }
 .news-wrapper>.carousel-card{
     max-width: 100%;
 }
-.news>h2{
-    margin:50px 0;
+.news{
+    display: grid;    
+    gap: var(--gutter);
+}
+.news-wrapper{
+    gap: var(--gutter);
+}
+@media(max-width:500px){
+    .resources{
+        padding-top: 60px;
+    }
+    h1{
+        padding-bottom: 60px;
+        text-align: center !important;
+    }
 }

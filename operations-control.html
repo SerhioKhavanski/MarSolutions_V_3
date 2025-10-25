@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="assets/css/components/menu.css">
     <link rel="stylesheet" href="assets/css/components/cards.css">
     <link rel="stylesheet" href="assets/css/components/slider.css">
+    <link rel="stylesheet" href="assets/css/components/divider.css">
     <link rel="stylesheet" href="assets/css/layout/container.css">
     <link rel="stylesheet" href="assets/css/layout/footer.css">
     <link rel="stylesheet" href="assets/css/layout/header.css">
     <link rel="stylesheet" href="assets/css/layout/grid.css">
+    <link rel="stylesheet" href="assets/css/layout/cta-section.css">
     <link rel="stylesheet" href="assets/css/pages/main-page-styles.css">
     <link rel="stylesheet" href="assets/css/pages/operations-control.css">
     <link rel="stylesheet" href="assets/css/utilities/sapcing.css">
@@ -27,7 +29,7 @@
 <body>
     <header>
 
-        <nav class="container" role="navigation">
+        <nav class="container wptb" role="navigation">
             <a href=""><img class="logo-theme-dark" src="assets/img/mar_solutions_logo_dark.svg" alt=""><img class="logo-theme-light" src="assets/img/mar_solutions_logo_light.svg" alt=""></a>
             
             <div class="layer" aria-hidden="true" role="presentation" tabindex="-1"></div>
@@ -56,11 +58,11 @@
             
         </nav>
 
-        <section class="second-hero-info third-hero-info">
+        <section class="third-hero-info">
 
-            <div class="container">
+            <div class="container gap-6">
                 <h1>MARTA – Контроль операций</h1>
-                <p>Управляйте эффективно рисками, которые вы можете выявить</p>
+                <h2>Управляйте эффективно рисками, которые вы можете выявить</h2>
             </div>
 
         </section>
@@ -68,8 +70,9 @@
     </header>
 
     <main>
-
-        <!-- ===== Slider ===== -->
+        <section class="container enter-txt center">
+            MARTA предоставляет всем клиентам возможность отслеживать и проверять свои торговые операции по всем возможным критериям НСФР, НАУФОР, Московская биржа, Банк России
+        </section>
 <section class="picker-wrap container">
     <div class="picker" id="picker" aria-label="Типы нарушений" tabindex="0">
       <button class="slider-card">
@@ -117,9 +120,9 @@
 
   
 
-         <section class="container row va reverse">
+         <section class="container gap-3 row va reverse">
             <img class="col-xxl-6" src="assets/img/interface.webp" alt="">
-            <article class="operation-control-info col-xxl-6 ">
+            <article class="container-info gap-3 col-xxl-6 ">
                 <h2>Интуитивно понятный интерфейс и комплексная обработка данных</h2>
                 <p>
                     Высокопроизводительный и удобный графический интерфейс со всеми необходимыми функциями для работы с данными.
@@ -130,8 +133,8 @@
             </article>
         </section>
         
-        <section class="container row va reverse">
-            <article class="operation-control-info col-xxl-6">
+        <section class="container gap-3 row va reverse">
+            <article class="container-info gap-3 col-xxl-6">
                 <h2>Ведите мониторинг, анализи расследования в одном ПО</h2>
                 <p>
                     Дневная сводка показывает ключевые параметры системы сразу при входе в систему. В ней отображается обзор информации за одну выбранную дату.
@@ -144,9 +147,9 @@
 
         </section>
 
-        <section class="container row va reverse">
+        <section class="container gap-3 row va reverse">
             <img class="col-xxl-6" src="assets/img/analysis.webp" alt="">
-            <article class="operation-control-info col-xxl-6">
+            <article class="container-info gap-3 col-xxl-6">
                 <h2>Обработка и анализ 1 млн операций менее чем за 10 мин</h2>
                 <p>
                     MARTA представляет собой систему, полностью размещенную on-premise (локально, внутри цифрового контура клиента). Особенности развертывания позволяют совместное использование ресурсов, и.с. нет необходимости выделять отдельный сервер, на котором будет работать только решение MARTA.
@@ -162,70 +165,75 @@
             </p>
         </section>
 
-         <section class="steps container row">
-            <article class="carousel-card col-12 col-xl-4">
-                <img src="assets/img/message.webp" alt="">
-                <h3>
-                    Шаг 1
-                </h3>
-                <p>
-                    Договориться об установке
-                </p>
-            </article>
+         <section class="steps container gap-6">
+            <div class="steps-wrapper row ">
+                <article class="carousel-card col-12 col-xl-4">
+                    <img src="assets/img/message.webp" alt="">
+                    <h3>
+                        Шаг 1
+                    </h3>
+                    <p>
+                        Договориться об установке
+                    </p>
+                </article>
 
-            <article class="carousel-card col-12 col-xl-4">
-                <img src="assets/img/folder.webp" alt="">
-                <h3>
-                    Шаг 2
-                </h3>
-                <p>
-                   Согласовать конфигурации
-                </p>
-            </article>
+                <article class="carousel-card col-12 col-xl-4">
+                    <img src="assets/img/folder.webp" alt="">
+                    <h3>
+                        Шаг 2
+                    </h3>
+                    <p>
+                    Согласовать конфигурации
+                    </p>
+                </article>
 
-            <article class="carousel-card col-12 col-xl-4">
-                <img src="assets/img/case.webp" alt="">
-                <h3>
-                    Шаг 3
-                </h3>
-                <p>
-                    Выдача лицензии и технической документации
-                </p>
-            </article>
+                <article class="carousel-card col-12 col-xl-4">
+                    <img src="assets/img/case.webp" alt="">
+                    <h3>
+                        Шаг 3
+                    </h3>
+                    <p>
+                        Выдача лицензии и технической документации
+                    </p>
+                </article>
 
-            <article class="carousel-card col-12 col-xl-4">
-                <img src="assets/img/console.webp" alt="">
-                <h3>
-                    Шаг 4
-                </h3>
-                <p>
-                   Установка ПО на сервер
-            </article>
+                <article class="carousel-card col-12 col-xl-4">
+                    <img src="assets/img/console.webp" alt="">
+                    <h3>
+                        Шаг 4
+                    </h3>
+                    <p>
+                    Установка ПО на сервер
+                </article>
 
-            <article class="carousel-card col-12 col-xl-4">
-                <img src="assets/img/wi-fi.webp" alt="">
-                <h3>
-                     Шаг 5
-                </h3>
-                <p>
-                    Загрузка необходимых данных
-                </p>
-            </article>
+                <article class="carousel-card col-12 col-xl-4">
+                    <img src="assets/img/wi-fi.webp" alt="">
+                    <h3>
+                         Шаг 5
+                    </h3>
+                    <p>
+                        Загрузка необходимых данных
+                    </p>
+                </article>
 
-            <article class="carousel-card col-12 col-xl-4">
-                <h3>
-                    MARTA готовак использованию
-                </h3>
-            </article>
-        </section>
+                <article class="carousel-card col-12 col-xl-4">
+                    <h3>
+                        MARTA готовак использованию
+                    </h3>
+                </article>
+            </div>
 
-        <section class="container">
-            <p>
+           <p>
                 Внедрение MARTA спроектировано для максимальной оперативности и может быть осуществлено в течение одного дня: утром мы согласуем конфигурацию и предоставим дистрибутив и лицензию, после чего IT устанавливаете ПО и загружает данные. Уже к вечеру система будет полностью готова к работе, а ваши пользователи смогут приступить к тестированию или полноценной эксплуатации платформы. Это позволяет минимизировать простои и быстро начать получать пользу от решения.
             </p>
+
+        </section>  
+
+        <section class="container">
+ 
         </section>
 
-        <section class="main-cta wp">
+        <section class="main-cta pb72">
             <svg class="bg-cta" viewBox="0 0 1435 548" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1432.64 363.726C1201.19 479.242 958.744 538.365 714.359 538.365C469.949 538.365 227.476 479.228 -3.99994 363.69C226.727 485.203 469.522 547.473 714.358 547.473C959.168 547.473 1201.94 485.217 1432.64 363.726Z" fill="#3FE1F3"/>
             <path d="M1435.01 363.123C1203.19 479.037 960.32 538.368 715.508 538.368C470.695 538.368 227.828 479.037 -3.99214 363.123V-68.2805H1435.01V363.123Z" fill="url(#paint0_linear_221_1167)"/>

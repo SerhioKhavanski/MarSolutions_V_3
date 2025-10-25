@@ -1,29 +1,56 @@
-.steps>.carousel-card{
+.container-info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
+.container>img{
+    width:100%;
+}
+
+.reverse:nth-child(3)>.container-info,
+.reverse:nth-child(5)>.container-info{
+    order: -1;
+}
+.reverse:nth-child(4)>.container-info{
+    order: 1;
+}
+.steps-wrapper{
+    gap: 24px;
+}
+.steps-wrapper>.carousel-card{
     max-width: 100%;
 }
-.steps>.carousel-card>img{
+.steps-wrapper>.carousel-card>img{
     width: 100px;
 }
-.steps>.carousel-card:last-child{
+.steps-wrapper>.carousel-card:last-child{
     display: flex;
     justify-content: center;
     background-color: var(--bg-primery-btn);
     transition: 0.3s;
 }
-.reverse:nth-child(2)>.operation-control-info,
-.reverse:nth-child(4)>.operation-control-info{
-    order: -1;
+.steps{
+    display: grid;
+    gap: var(--gutter);
 }
-.reverse:nth-child(3)>.operation-control-info{
-    order: 1;
+.enter-txt{
+    padding-top: 16vh;
+    padding-bottom: 0;
+    line-height: 30px;
 }
-@media(max-width:500px){
-.reverse:nth-child(3)>.operation-control-info{
+@media(max-width:1024px){
+    .enter-txt{
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+}
+@media(max-width:1024px){
+.reverse:nth-child(4)>.container-info{
     order: -1;
 }
 }
 @media(hover:hover) and (pointer: fine){
-    .steps>.carousel-card:last-child:hover{
+    .steps-wrapper>.carousel-card:last-child:hover{
         box-shadow: 0 0 15px var(--bg-primery-btn);
     }
 }

@@ -6,32 +6,46 @@ html, body { overflow-x: clip; }
   animation: march linear infinite;
 }
 
-
+.container>img {
+  width: 100%;
+}
+.container-info>a{
+  margin-top: 14px;
+}
+.container-info{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+}
 #Shape #Full\ rotation     ellipse { --period: 24.55px; animation-duration: 0.82s; }
 #Shape #Full\ rotation_2   ellipse { --period: 82.97px; animation-duration: 2.60s; }
 #Shape #Full\ rotation_3   ellipse { --period: 41.83px; animation-duration: 1.30s; }
 #Shape #Full\ rotation_4   ellipse { --period: 41.83px; animation-duration: 1.70s; }
 
-.benefits-points>.carousel-card{
-    max-width: 500px;
-    padding: 32px;
-}
-.benefits-points>.carousel-card>img{
-    width: 120px;
-}
+
 .benefits-points{
     display: flex;
     flex-direction: column;
+    margin-top: clamp(16px, 8%, 115px);
+}
+.benefits-points>.carousel-card{
+  max-width: 500px;
+  padding: 32px;
+}
+.benefits-points>.carousel-card>img{
+  width: 120px;
 }
 .benefits-points>.carousel-card:nth-child(2n){
-    align-self: flex-end;
+  align-self: flex-end;
 }
 .benefits-points>.carousel-card:last-child{
-    max-width: 100%;
-    margin-top: 60px;
+  max-width: 100%;
+  margin-top: 60px;
 }
 .extentions{
-        margin-bottom: 300px;
+  display: grid;
+  gap: var(--gutter);
+
 }
 .extention{
   position: relative;
@@ -40,26 +54,16 @@ html, body { overflow-x: clip; }
   margin: 0 auto;
   background-color: #b1afc134;
   padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  gap:var(--gutter);
 }
-.extention>*{
-    margin: 0;
-}
-.extentions-heading>p{
+
+.extentions-heading{
     max-width: 734px;
     margin: auto;
     text-align: center;
-}
-.extentions-heading>*{
-    margin: 0;
-}
-.extentions-heading{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 50px;
+    display: grid;
+    gap:var(--gutter);
 }
 
 .extention-wraper{
@@ -69,7 +73,9 @@ html, body { overflow-x: clip; }
   justify-content: center;
   overflow: visible;    
 }
-
+.bigMargin{
+  margin-top: 26vh;
+}
 
 .dec1, .dec2{
   position: absolute;
@@ -100,12 +106,16 @@ html, body { overflow-x: clip; }
     
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1024px){
   .dec1{display: none;}
   .dec2{ transform: translate( 80%, 50%) scaleX(-1); }
   .extentions{
     margin-bottom: 0;
   }
+  .bigMargin{
+    margin-top: 0;
+  }
+
 }
 @media (max-width: 500px){
   .dec1,.dec2{ display: none; }

@@ -72,9 +72,6 @@
     text-decoration: none;
     color: var(--text-primery);
   }
-  .picker-wrap{
-    margin: 40px auto;
-  }
 
   .picker{
     scroll-snap-type: y mandatory;   
@@ -144,6 +141,9 @@
       .reviews__viewport{
         -webkit-mask-image: none;
         mask-image:none;
+      }
+      .reviews{
+        gap: 56px;
       }
     }
   

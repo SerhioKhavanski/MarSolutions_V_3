@@ -27,6 +27,14 @@
                     color .3 ease,
                     border-color ease;
 }
+
+.hero-buttons-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
 @media(hover:hover) and (pointer:fine){
     .primery-btn:hover{
         box-shadow: 0 0 15px #44ABE1;

@@ -1,0 +1,50 @@
+.main-cta{
+    position: relative;
+    overflow: hidden;
+}
+.main-cta>svg{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-cta-info{
+    display: grid;
+    gap: var(--gutter);
+    max-width: 680px;
+    left: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    top: 10%;
+}
+
+@media(max-width:1920px){
+    .main-cta>svg{
+        width: 1920px;
+    }
+}
+@media(max-width:1440px){
+    .main-cta{
+        width: 100%;
+    }
+}
+@media(max-width:500px){
+    .main-cta{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-cta-info{
+        margin-inline: 1rem;
+    }
+    .main-cta-info,.main-cta>svg{
+        position: static;
+    }
+    .main-cta>svg{
+        width: 100%;
+        transform: translateX(0);
+        order: 1;
+    }
+    .main-cta-info>h2, 
+    .main-cta-info>p{
+        text-align: left;
+    }
+}
