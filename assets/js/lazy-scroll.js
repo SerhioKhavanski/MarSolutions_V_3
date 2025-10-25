@@ -1,98 +1,108 @@
 (() => {
-  const container = document.querySelector('.split__content');
-  const links = [...document.querySelectorAll('#spy a')];
-  const sections = [...container.querySelectorAll('section[id]')];
-  const linkById = Object.fromEntries(links.map(a => [a.hash.slice(1), a]));
+  const mql = window.matchMedia('(min-width: 768px)');
+  let teardown = null; // функция выключения десктоп-логики при смене брейкпоинта
 
-  if (!container || !links.length || !sections.length) return;
+  function enableDesktopAccordion(){
+    const container = document.querySelector('.split__content');
+    const links = [...document.querySelectorAll('#spy a')];
+    const sections = [...document.querySelectorAll('.split__content section[id]')];
+    if (!container || !links.length || !sections.length) return;
 
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
-  let programmaticScroll = false;     
-  let historyWriteTmr = null;         
+    const byId = Object.fromEntries(sections.map(s => [s.id, s]));
+    let historyWriteTmr = null;
+    let current = (location.hash.replace('#','') && byId[location.hash.replace('#','')])
+                  ? location.hash.replace('#','')
+                  : sections[0].id;
 
-  function setActive(id, { fromClick = false } = {}) {
-    links.forEach(a => a.classList.toggle('is-active', a.hash === `#${id}`));
+    // стартовое состояние
+    sections.forEach(s => s.classList.toggle('is-active', s.id === current));
+    container.style.height = byId[current].scrollHeight + 'px';
+    links.forEach(a => a.classList.toggle('is-active', a.hash === `#${current}`));
 
-    const url = `#${id}`;
-    clearTimeout(historyWriteTmr);
-    historyWriteTmr = setTimeout(() => {
-      (fromClick ? history.pushState : history.replaceState).call(history, { id }, '', url);
-    }, 80);
-  }
-
-  function scrollToSection(id, push = false) {
-    const target = document.getElementById(id);
-    if (!target) return;
-    const pageY = window.scrollY;
-
-    programmaticScroll = true;
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    window.scrollTo({ top: pageY, left: 0 });
-
-    setActive(id, { fromClick: push });
-    let lastY = container.scrollTop, still = 0;
-    const tick = () => {
-      const nowY = container.scrollTop;
-      if (Math.abs(nowY - lastY) < 1) { 
-        if (++still >= 3) { programmaticScroll = false; return; }
-      } else { still = 0; }
-      lastY = nowY;
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-
-
-  links.forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const id = a.hash.slice(1);
-      scrollToSection(id, true);
-
-      a.focus({ preventScroll: true });
+    // следим за изменениями контента/шрифтов
+    const ro = new ResizeObserver(() => {
+      container.style.height = byId[current].scrollHeight + 'px';
     });
-  });
+    sections.forEach(s => ro.observe(s));
 
+    function setActive(id, { fromClick = false } = {}){
+      if (!byId[id] || id === current) return;
+      // анимируем высоту контейнера
+      container.style.height = byId[id].scrollHeight + 'px';
 
-  window.addEventListener('popstate', () => {
-    const id = location.hash.replace('#', '') || sections[0].id;
-    scrollToSection(id, false);
-  });
+      sections.forEach(s => s.classList.toggle('is-active', s.id === id));
+      links.forEach(a => a.classList.toggle('is-active', a.hash === `#${id}`));
+      current = id;
 
+      clearTimeout(historyWriteTmr);
+      historyWriteTmr = setTimeout(() => {
+        (fromClick ? history.pushState : history.replaceState).call(history, { id }, '', `#${id}`);
+      }, 80);
+    }
 
-  const io = new IntersectionObserver((entries) => {
-    if (programmaticScroll) return; 
+    // клики по навигации — переключают секции (без прокрутки страницы)
+    const onClick = (e) => {
+      e.preventDefault();
+      const id = e.currentTarget.hash.slice(1);
+      setActive(id, { fromClick: true });
+      e.currentTarget.focus({ preventScroll: true });
+    };
+    links.forEach(a => a.addEventListener('click', onClick));
 
+    // back/forward
+    const onPop = () => {
+      const id = location.hash.replace('#', '') || sections[0].id;
+      setActive(id, { fromClick: false });
+    };
+    window.addEventListener('popstate', onPop);
 
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    // при загрузке — выставляем из hash или первую
+    const onLoad = () => {
+      const initial = location.hash.replace('#','') || sections[0].id;
+      setActive(initial, { fromClick: false });
+    };
+    window.addEventListener('load', onLoad);
 
-    if (!visible.length) return;
+    // На десктопе можно ещё синхронизировать активные пункты при прокрутке страницы колёсиком.
+    // Но в аккордеоне мы не скроллим страницу; если захочешь "скроллом менять секции" — можно добавить wheel-хэндлер.
 
-    const topId = visible[0].target.id;
-    setActive(topId, { fromClick: false });
-  }, {
-    root: container,
-    threshold: buildThresholds(0.35, 0.85), 
-    rootMargin: '0px 0px -10% 0px'         
-  });
-
-  sections.forEach(s => io.observe(s));
-
-
-  window.addEventListener('load', () => {
-    const initial = location.hash.replace('#', '') || sections[0].id;
-    if (location.hash) scrollToSection(initial, false);
-    else setActive(initial, { fromClick: false });
-  });
-
-  function buildThresholds(from = 0.3, to = 0.9, steps = 6) {
-    const arr = [];
-    const step = (to - from) / (steps - 1);
-    for (let i = 0; i < steps; i++) arr.push(from + step * i);
-    return arr;
+    // Функция выключения (для смены брейкпоинта)
+    return () => {
+      ro.disconnect();
+      links.forEach(a => a.removeEventListener('click', onClick));
+      window.removeEventListener('popstate', onPop);
+      window.removeEventListener('load', onLoad);
+      // раскладываем обратно все секции как обычные блоки
+      sections.forEach(s => s.classList.remove('is-active'));
+      container.style.height = 'auto';
+    };
   }
+
+  function disableToMobileFlow(){
+    // На мобильном никакой логики не нужно: якоря ведут к секциям нативно,
+    // всё в потоке, без preventDefault, без абсолютного позиционирования.
+    // Просто убедимся, что высота авто и классы сброшены.
+    const container = document.querySelector('.split__content');
+    const sections = [...document.querySelectorAll('.split__content section[id]')];
+    if (container){
+      container.style.height = 'auto';
+    }
+    sections.forEach(s => s.classList.remove('is-active'));
+  }
+
+  function handleChange(e){
+    // Переключаемся между режимами при изменении ширины
+    if (teardown){ teardown(); teardown = null; }
+    if (e.matches){
+      teardown = enableDesktopAccordion();
+    } else {
+      disableToMobileFlow();
+    }
+  }
+
+  // Инициализация
+  handleChange(mql);
+  mql.addEventListener('change', handleChange);
 })();
