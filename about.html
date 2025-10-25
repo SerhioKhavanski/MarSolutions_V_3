@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/components/buttons.css">
     <link rel="stylesheet" href="assets/css/components/menu.css">
     <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/components/divider.css">
     <link rel="stylesheet" href="assets/css/layout/container.css">
     <link rel="stylesheet" href="assets/css/layout/footer.css">
     <link rel="stylesheet" href="assets/css/layout/header.css">
@@ -24,7 +25,7 @@
 <body>
     <header>
 
-        <nav class="container" role="navigation">
+        <nav class="container wptb" role="navigation">
             <a href=""><img class="logo-theme-dark" src="assets/img/mar_solutions_logo_dark.svg" alt=""><img class="logo-theme-light" src="assets/img/mar_solutions_logo_light.svg" alt=""></a>
             
             <div class="layer" aria-hidden="true" role="presentation" tabindex="-1"></div>
@@ -59,11 +60,11 @@
                 <img src="assets/img/hero-img-abot.webp" alt="">
             </video>
             <div class="hero-info-wrapper m2 fix-gradient">
-                <article class="hero-info gap-4">
-                    <h1 class="wm">
+                <article class="hero-info gap-1">
+                    <h1>
                         Видим то, что скрыто от других
                     </h1>
-                    <p class="wm">
+                    <p>
                         Мы создаем технологии, которые делают контроль простым и точным
                     </p>
                 </article>
@@ -71,81 +72,74 @@
         </section>
     </header>
     <main>
-        <h2 class="big-txt center history-title">От стартапа до отраслевого стандарта</h2>
-        <section class="container history gap-4">
 
-            <div class="timeline__rail">
-                <img src="assets/img/start-point-d.svg" class="logo-theme-dark" alt="">
-                <img src="assets/img/start-point-l.svg" class="logo-theme-light" alt="">
-            </div>
-            
-            <div class="timeline__content">
+        <section class="container history-wrapper gap-4">
+            <h2 class="big-txt center history-title">От стартапа до отраслевого стандарта</h2>
+            <div class="history">
+                <div class="timeline__rail">
+                    <img src="assets/img/start-point-d.svg" class="logo-theme-dark" alt="">
+                    <img src="assets/img/start-point-l.svg" class="logo-theme-light" alt="">
+                </div>
+                
+                <div class="timeline__content row gap-2">
 
-              <article class="timeline__item gap-4">
-                <div class="time">
-                    <h3 class="accent-color wm left">2018</h3>
-                    <p>Рождение идеи</p>
-                </div>
-                <div class="time-info">
-                    <p>
-                        Основание компании и запуск MVP платформы MARTA. Мы привлекли первого ключевого клиента, доказав жизнеспособность и востребованность нашего подхода к контролю операций.
-                    </p>
-                </div>
-              </article>
 
-              <article class="timeline__item gap-4">
-                <div class="time">
-                    <h3 class="accent-color wm left">2020</h3>
-                    <p>Признание на государственном уровне</p>
-                </div>
-                <div class="time-info">
-                    <p>
-                        Победа в первом государственном тендере и реализация сложного проекта по анализу «разбора бордов». Это подтвердило надежность и зрелость нашего решения для работы с крупнейшими игроками рынка.
-                    </p>
-                </div>
-              </article>
+                    <div class="time col-xl-5 col-lg-4 col-md-4">
+                        <h3 class="accent-color left">2018</h3>
+                        <p>Рождение идеи</p>
+                    </div>
+                    <div class="time-info col-xl-7 col-lg-8 col-md-8">
+                        <p>
+                            Основание компании и запуск MVP платформы MARTA. Мы привлекли первого ключевого клиента, доказав жизнеспособность и востребованность нашего подхода к контролю операций.
+                        </p>
+                    </div>
 
-              <article class="timeline__item gap-4">
-                <div class="time">
-                    <h3 class="accent-color wm left">2022</h3>
-                    <p>Устойчивость в период перемен</p>
-                </div>
-                <div class="time-info">
-                    <p>
-                        Время испытаний, которое доказало нашу силу. Мы не только продолжили работу, но и усилили платформу, запустив функционал расследований и статусную модель для сквозного отслеживания инцидентов.
-                    </p>
-                </div>
-              </article>
 
-              <article class="timeline__item gap-4">
-                <div class="time">
-                    <h3 class="accent-color wm left">2024</h3>
-                    <p>Полный контроль в соответствии с 224-ФЗ</p>
-                </div>
-                <div class="time-info">
-                    <p>
-                        Запуск комплексного решения по автоматизации полного цикла внутреннего контроля. Мы предоставили клиентам исчерпывающий инструмент для соответствия жёстким требованиям регулятора.
-                    </p>
-                </div>
-              </article>
+                    <div class="time col-xl-5 col-lg-4 col-md-4">
+                        <h3 class="accent-color left">2020</h3>
+                        <p>Признание на государственном уровне</p>
+                    </div>
+                    <div class="time-info col-xl-7 col-lg-8 col-md-8">
+                        <p>
+                            Победа в первом государственном тендере и реализация сложного проекта по анализу «разбора бордов». Это подтвердило надежность и зрелость нашего решения для работы с крупнейшими игроками рынка.
+                        </p>
+                    </div>
 
-              <article class="timeline__item gap-4">
-                <div class="time">
-                    <h3 class="accent-color wm left">2025</h3>
-                    <p>Взгляд в будущее</p>
-                </div>
-                <div class="time-info">
-                    <p>
-                        Расширение экосистемы MARTA: запуск нового модуля для автоматизированного ведения списков инсайдеров. Мы продолжаем развиваться, чтобы закрывать всё больше задач наших партнёров.
-                    </p>
-                </div>
-              </article>
-              
 
+                    <div class="time col-xl-5 col-lg-4 col-md-4">
+                        <h3 class="accent-color left">2022</h3>
+                        <p>Устойчивость в период перемен</p>
+                    </div>
+                    <div class="time-info col-xl-7 col-lg-8 col-md-8">
+                        <p>
+                            Время испытаний, которое доказало нашу силу. Мы не только продолжили работу, но и усилили платформу, запустив функционал расследований и статусную модель для сквозного отслеживания инцидентов.
+                        </p>
+                    </div>
+
+                    <div class="time col-xl-5 col-lg-4 col-md-4">
+                        <h3 class="accent-color left">2024</h3>
+                        <p>Полный контроль в соответствии с 224-ФЗ</p>
+                    </div>
+                    <div class="time-info col-xl-7 col-lg-8 col-md-8">
+                        <p>
+                            Запуск комплексного решения по автоматизации полного цикла внутреннего контроля. Мы предоставили клиентам исчерпывающий инструмент для соответствия жёстким требованиям регулятора.
+                        </p>
+                    </div>
+
+                    <div class="time col-xl-5 col-lg-4 col-md-4">
+                        <h3 class="accent-color left">2025</h3>
+                        <p>Взгляд в будущее</p>
+                    </div>
+                    <div class="time-info col-xl-7 col-lg-8 col-md-8">
+                        <p>
+                            Расширение экосистемы MARTA: запуск нового модуля для автоматизированного ведения списков инсайдеров. Мы продолжаем развиваться, чтобы закрывать всё больше задач наших партнёров.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="container why row">
+        <section class="container why row ptb1">
             <article class="carousel-card col-12 col-sm-6 col-lg-3" >
                 <img src="assets/img/Target.webp" alt="">
                 <p>Глубокое понимание законодательства области 224-ФЗ</p>
@@ -169,8 +163,8 @@
 
 
 
-        <h2 class="accent-color center">Создаем безопасную среду с 2018 года</h2>
-        <section class="carousel container" aria-label="Партнёры">
+        <section class="container wpi carousel-wrapper gap-4 ptb2" aria-label="Партнёры">
+            <h2 class="center accent-color dm">Создаем безопасную среду с 2018 года</h2>
             <div class="carousel">
                 <div class="group">
                 <div class="carousel-item"><img src="assets/img/renesans_capital.webp" alt=""></div>
@@ -190,7 +184,8 @@
                 <div class="carousel-item"><img src="assets/img/nsfr.webp" alt=""></div>
                 </div>
             </div>
-        </section>
+              
+            </section>
         <section class="wp points">
             <article class="main-points">
                 <div class="split">

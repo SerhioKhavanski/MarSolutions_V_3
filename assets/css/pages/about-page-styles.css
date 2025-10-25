@@ -1,20 +1,10 @@
-.timeline__item p,
-.timeline__item h3{
-    margin: 0;
-}
-.timeline__item{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+.history-wrapper{
+    display: grid;
     gap: var(--gutter);
-    margin-bottom: var(--gutter);
-}
-.time{
-    max-width: 350px;
-    margin-bottom: 24px;
-}
-.time-info{
-    max-width: 530px;
+    padding-bottom: 0;
+    padding-top: 48px;
+    margin-top: clamp(16px, 8%, 115px);
 }
 .history{
     display: flex;
@@ -27,12 +17,11 @@
     background-position: 0 24px;
     background-size: 100% calc(100% - 24px);
 }
-.history-title{
-    margin-top: 160px;
+.time{
+    max-width: 350px;
 }
-.why{
-    margin-top: 32px;
-}
+
+
 .why>.carousel-card{
     width: 100%;
     padding: 12px;
@@ -152,28 +141,19 @@
 .mobile-title{
     display: none;
 }
-@media(max-width:1920px){
-    .since>img{
-    width: 1920px;
-}
-}
-@media(max-width:1000px){
-    .time-info,.time{
-        max-width: 100%;
-    }
-    .timeline__item{
-        gap: 0;
-}
-}
+
+
 @media(max-width:500px){
     h1{
         font-size: 2.5rem;
     }
     .history-title{
         text-align: left;
-        margin-inline: 1rem;
         font-size: 1.7rem;
-        margin-top: 30px;
+    }
+    .history-wrapper{
+        margin-top: 0;
+        padding-top: 16px;
     }
     .mobile-title{
         display: block;

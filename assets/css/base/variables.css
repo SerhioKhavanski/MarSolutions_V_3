@@ -1,6 +1,6 @@
 :root{
   --container-max: 1440px;
-  --container-pad-x: clamp(16px, 6vw, 208px);
+  --container-pad-x: clamp(16px, 14vw, 208px);
   --container-pad-y: clamp(24px, 6vw, 60px);
   --gutter: 16px;
   --nav-h:72px;
